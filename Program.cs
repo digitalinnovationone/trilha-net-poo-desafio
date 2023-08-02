@@ -1,6 +1,6 @@
 ﻿using DesafioPOO.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
+//Realizar os testes com as classes Nokia e Iphone
 Nokia n1 = new Nokia("(21)983088253", "Nokia1", "234234", 64);
 Iphone i1 = new Iphone("(21)983088253", "Iphone1", "423423", 128);
 
