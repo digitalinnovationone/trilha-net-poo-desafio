@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioPOO", "trilha-net-poo-desafio2\DesafioPOO.csproj", "{05E033A5-44ED-45D8-B0F1-2E3BBF6959C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartphoneTeste", "SmartphoneTeste\SmartphoneTeste.csproj", "{B2261CE5-30E2-408C-A6F2-AC6BE35A4351}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05E033A5-44ED-45D8-B0F1-2E3BBF6959C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E033A5-44ED-45D8-B0F1-2E3BBF6959C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E033A5-44ED-45D8-B0F1-2E3BBF6959C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E033A5-44ED-45D8-B0F1-2E3BBF6959C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2261CE5-30E2-408C-A6F2-AC6BE35A4351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2261CE5-30E2-408C-A6F2-AC6BE35A4351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2261CE5-30E2-408C-A6F2-AC6BE35A4351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2261CE5-30E2-408C-A6F2-AC6BE35A4351}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
