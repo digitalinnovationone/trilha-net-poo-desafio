@@ -16,6 +16,8 @@ namespace DesafioPOO.Models
         {
             Numero = numero;
             // TODO: Passar os parâmetros do construtor para as propriedades
+            // Implementado 
+            
             Modelo = modelo;
             Imei = imei;
             Memoria = memoria;
