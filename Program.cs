@@ -1,3 +1,15 @@
 ﻿using DesafioPOO.Models;
-
-// TODO: Realizar os testes com as classes Nokia e Iphone
+Console.WriteLine("\n");
+Console.WriteLine("Teste de instalação de aplicativos em smartphones.");
+Iphone iphone = new Iphone("61 945619848", "13 Pro Max", "561498461948", 512);
+Console.WriteLine($"Iphone com número de telefone: {iphone.Numero}.");
+iphone.Ligar();
+iphone.ReceberLigacao();
+iphone.InstalarAplicativo("Albion Online");
+Console.WriteLine("\n");
+Nokia nokia = new Nokia("65 995518148", "G21", "561845619885", 128);
+Console.WriteLine($"Nokia com número de telefone: {nokia.Numero}.");
+nokia.Ligar();
+nokia.ReceberLigacao();
+nokia.InstalarAplicativo("Call of Duty Mobile");
+Console.WriteLine("\n");
