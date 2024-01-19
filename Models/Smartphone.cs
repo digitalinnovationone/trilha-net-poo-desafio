@@ -1,6 +1,6 @@
 namespace DesafioPOO.Models
 {
-    public abstract class Smartphone
+    public abstract class Smartphone : Carteira
     {
         public string Numero { get; set; }
         // DONE: Implementar as propriedades faltantes de acordo com o diagrama
@@ -12,7 +12,7 @@ namespace DesafioPOO.Models
         protected string Operadora { get; set; }
         protected List<string> apps = new();
 
-        public Smartphone()
+        public Smartphone(int credito=0) : base(credito)
         {
         }
         public Smartphone(
@@ -21,16 +21,16 @@ namespace DesafioPOO.Models
             string modelo, 
             string imei, 
             int memoria, 
-            int memoriaRam, 
-            string operadora
-        ){
+            string operadora,
+            int credito
+        ) : base (credito)
+        {
             Numero = numero;
             // DONE: Passar os parâmetros do construtor para as propriedades
             Marca = marca;
             Modelo = modelo;
             Imei = imei;
             Memoria = memoria;
-            MemoriaRam = memoriaRam;
             Operadora = operadora;
         }
 
@@ -54,7 +54,9 @@ namespace DesafioPOO.Models
             Console.WriteLine($"Celular {Marca} está recebendo uma ligação...");
         }
 
-        public abstract void InstalarAplicativo();
+        public abstract bool InstalarAplicativo();
+
+        public abstract void Comprar();
 
         public void DesinstalarApp(){
             Console.WriteLine("Informa o nome do app que você deseja desinstalar");

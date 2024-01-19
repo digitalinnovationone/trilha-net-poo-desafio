@@ -11,14 +11,14 @@ namespace DesafioPOO.Models
             string modelo, 
             string imei, 
             int memoria, 
-            int memoriaRam, 
-            string operadora
-        ) : base(numero, marca, modelo, imei, memoria, memoriaRam, operadora)
+            string operadora,
+            int total
+        ) : base(numero, marca, modelo, imei, memoria, operadora, total)
         {
 
         }
         // DONE: Sobrescrever o método "InstalarAplicativo"
-        public override void InstalarAplicativo() {
+        public override bool InstalarAplicativo() {
                        
             Console.WriteLine("Informe o nome do app que você deseja instalar:");
             string nomeApp = Console.ReadLine();
@@ -31,16 +31,31 @@ namespace DesafioPOO.Models
                     --Memoria;
                     Console.WriteLine($" Aplicativo {nomeApp} instalado com sucesso!");
 
+                    return false;
+
                 } else {
 
-                    Console.WriteLine($"Seu Iphone - {Modelo} não possui memória suficiente para instalar o app {nomeApp}" + "\n"
-                    + "Caso deseje instalar o app, você pode desinstalar um app já existente em seu Ophone");
+                    Console.WriteLine($"Seu Nokia - {Modelo} não possui memória suficiente para instalar o app {nomeApp}");                    
+                    return true;
 
                 }
                 
             }
             else {
-                Console.WriteLine($"O app {nomeApp} já existe em seu Iphone");
+                Console.WriteLine($"O app {nomeApp} já existe em seu Nokia");
+                return false;
+            }
+        }
+
+        public override void Comprar () {
+            if(Credito>0) {
+                --Credito;
+                DateTime data = DateTime.Now; 
+                historico.Add($"-$1,00 em {data}");
+                ++Memoria;
+                Console.WriteLine("Memória adicionada ao seu Nokia com sucesso!");
+            } else {
+                Console.WriteLine("Você não tem créditos :(");
             }
         }
     }

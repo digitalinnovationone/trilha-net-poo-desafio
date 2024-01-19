@@ -1,4 +1,5 @@
-﻿using DesafioPOO.Models;
+﻿using System.Runtime.InteropServices;
+using DesafioPOO.Models;
 
 // DONE: Realizar os testes com as classes Nokia e Iphone
 Console.WriteLine("Muito obrigada por ter escolhido nosso serviço!" + "\n"
@@ -30,6 +31,8 @@ Console.ReadLine();
 Console.WriteLine($"Me diga qual modelo você gostaria de adquirir");
 Console.Write("Modelo:");
 string modelo = Console.ReadLine();
+Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
+Console.ReadLine();
 
 Random rnd = new();
 string imei = rnd.Next().ToString();
@@ -37,38 +40,12 @@ string imei = rnd.Next().ToString();
 Console.WriteLine($"Me diga qual a operadora do seu chip");
 Console.Write("Operadora:");
 string operadora = Console.ReadLine();
+Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
+Console.ReadLine();
 
 Console.WriteLine($"Agora o seu número");
 Console.Write("Número:");
 string numero = Console.ReadLine();
-
-int memoriaRam = 0;
-
-Console.WriteLine($"Quantos GB de memória ram deseja:" +"\n" 
-            + "(Digite uma das opções abaixo)" +"\n" 
-            + "1 - 8 GB" +"\n" 
-            + "2 - 16 GB" +"\n" 
-            + "3 - 32 GB");
-
-while(memoriaRam==0){
-    switch (Console.ReadLine()) {
-            case "1":
-                memoriaRam = 8;
-                break;
-
-            case "2":
-                memoriaRam = 16;
-                break;
-
-            case "3":
-                memoriaRam = 32;
-                break;
-
-            default:
-                Console.WriteLine("Opção inválida");
-                break;
-    }
-}
 Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
 Console.ReadLine();
 
@@ -106,10 +83,10 @@ Smartphone smartphone = new Iphone();
 
 if (marca.Equals("Iphone"))
 {
-    smartphone = new Iphone(numero, marca, modelo, imei, memoria, memoriaRam, operadora);
+    smartphone = new Iphone(numero, marca, modelo, imei, memoria, operadora, 10);
 }
 else if (marca.Equals("Nokia")) {
-    smartphone = new Nokia(numero, marca, modelo, imei, memoria, memoriaRam, operadora);
+    smartphone = new Nokia(numero, marca, modelo, imei, memoria, operadora, 10);
 }
 
 bool home = true;
@@ -122,7 +99,9 @@ while (home)
     + "\"4\" para instalar app" + "\n"
     + "\"5\" para listar apps instalados" + "\n"
     + "\"6\" para desistalar app" + "\n"
-    + "\"7\" para encerrar serviço");
+    + "\"7\" para comprar memoria" + "\n"
+    + "\"8\" para mostrar histórico da sua carteira" + "\n"
+    + "\"9\" para encerrar serviço");
 
     switch (Console.ReadLine())
     {
@@ -140,7 +119,20 @@ while (home)
 
         case "4":
 
-            smartphone.InstalarAplicativo();
+            bool res = smartphone.InstalarAplicativo();
+            if (res.Equals(true)) {
+                Console.WriteLine("Caso deseje instalar o app, você pode:" + "\n" 
+                    + "(Digite uma das opções abaixo)" + "\n"
+                    + "1 - Desinstalar um app já existente em seu Nokia" + "\n"
+                    + "2 - Comprar mais memória");
+                string num = Console.ReadLine();
+                if(num.Equals("1")){
+                    smartphone.DesinstalarApp();
+                }
+                else if (num.Equals("2")) {
+                    smartphone.Comprar();
+                }
+            }
             break;
 
         case "5":
@@ -152,7 +144,16 @@ while (home)
             break;
 
         case "7":
+            smartphone.Comprar();
+            break;
+
+        case "8":
+            smartphone.Historico();
+            break;
+        
+        case "9":
             home = false;
+            Console.WriteLine("Encerrando serviço...");
             break;
 
         default:
