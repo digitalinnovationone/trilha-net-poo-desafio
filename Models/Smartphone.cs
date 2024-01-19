@@ -3,29 +3,85 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
-        private string Modelo { get; set; }
-        private string Imei { get; set; }
-        private int Memoria { get; set; }
-        public Smartphone(string numero, string modelo, string imei, int memoria)
+        // DONE: Implementar as propriedades faltantes de acordo com o diagrama
+        protected string Marca { get; set; }
+        protected string Modelo { get; set; }
+        protected string Imei { get; set; }
+        protected int Memoria { get; set; }
+        protected int MemoriaRam { get; set; }
+        protected string Operadora { get; set; }
+        protected List<string> apps = new();
+
+        public Smartphone()
         {
+        }
+        public Smartphone(
+            string numero, 
+            string marca, 
+            string modelo, 
+            string imei, 
+            int memoria, 
+            int memoriaRam, 
+            string operadora
+        ){
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            // DONE: Passar os parâmetros do construtor para as propriedades
+            Marca = marca;
             Modelo = modelo;
             Imei = imei;
             Memoria = memoria;
+            MemoriaRam = memoriaRam;
+            Operadora = operadora;
+        }
+
+        public void Detalhes() {
+            Console.WriteLine("Informações do celular: " + "\n" 
+            + $"Marca: {Marca}, " + "\n"
+            + $"Operadora: {Operadora}" + "\n"
+            + $"Número de telefone: {Numero}, " + "\n" 
+            + $"Modelo: {Modelo}, " + "\n" 
+            + $"Memória Ram: {MemoriaRam}, " + "\n" 
+            + $"Memória interna: {Memoria}");
         }
 
         public void Ligar()
         {
-            Console.WriteLine("Ligando...");
+            Console.WriteLine($"Celular {Marca} está fazendo uma ligação...");
         }
 
         public void ReceberLigacao()
         {
-            Console.WriteLine("Recebendo ligação...");
+            Console.WriteLine($"Celular {Marca} está recebendo uma ligação...");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo();
+
+        public void DesinstalarApp(){
+            Console.WriteLine("Informa o nome do app que você deseja desinstalar");
+            string nomeApp = Console.ReadLine();
+            if (apps.Contains(nomeApp)) {
+                apps.Remove(nomeApp);
+                ++Memoria;
+                Console.WriteLine($"Aplicativo {nomeApp} removido com sucesso!");
+            }
+            else {
+                Console.WriteLine($"O aplicativo {nomeApp} não está instalado no celular {Marca}");
+            }
+
+        }
+
+        public void ListarApps() {
+            if (apps.Any()) {
+                Console.WriteLine($"Aplicativos instalados no {Marca} - {Modelo}:");
+
+                foreach (string item in apps)
+                {
+                    Console.WriteLine($"- \"{item}\" -");
+                }
+            }
+            else {
+                Console.WriteLine($"Não tem aplicativo instalado no {Marca} - {Modelo}");
+            }
+        }
     }
 }
