@@ -1,4 +1,4 @@
-# DIO - Trilha .NET - Programação orientada a objetos
+# Sistema de celular - DIO - Trilha .NET
 www.dio.me
 
 ## Desafio de projeto
@@ -11,6 +11,23 @@ Você é responsável por modelar um sistema que trabalha com celulares. Para is
 Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
 Você deve criar as suas classes de acordo com o diagrama abaixo:
 
+## Funcionalidades
+ - Criação de um smartphone da marca Iphone ou Nokia;
+    - Propriedades:
+       * Número;
+       * Modelo;
+       * Memória;
+       * IMEI;
+       * Operadora;
+       * Carteira.
+ - Fazer ligação;
+ - Receber ligação;
+ - Instalar e desinstalar app;
+ - Mostrar detalhes sobre o smartphone;
+ - Listar apps instalados;
+ - Comprar memória;
+ - Mostrar histórico da carteira.
+
 ![Diagrama classes](Imagens/diagrama.png)
 
 ## Regras e validações
@@ -18,5 +35,7 @@ Você deve criar as suas classes de acordo com o diagrama abaixo:
 2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
 3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+## Tecnologias
+ - C#
+ - .NET
+ - GIT

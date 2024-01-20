@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using DesafioPOO.Models;
+﻿using DesafioPOO.Models;
 
 // DONE: Realizar os testes com as classes Nokia e Iphone
 Console.WriteLine("Muito obrigada por ter escolhido nosso serviço!" + "\n"
@@ -93,15 +92,15 @@ bool home = true;
 while (home)
 {
     Console.WriteLine($"Digite o número da ação que deseja realizar: " + "\n"
-    + "\"1\" para ver detalhes do seu Smartphone" + "\n"
-    + "\"2\" para realizar chamada" + "\n"
-    + "\"3\" para receber chamada" + "\n"
-    + "\"4\" para instalar app" + "\n"
-    + "\"5\" para listar apps instalados" + "\n"
-    + "\"6\" para desistalar app" + "\n"
-    + "\"7\" para comprar memoria" + "\n"
-    + "\"8\" para mostrar histórico da sua carteira" + "\n"
-    + "\"9\" para encerrar serviço");
+    + "1 para ver detalhes do seu Smartphone" + "\n"
+    + "2 para realizar chamada" + "\n"
+    + "3 para receber chamada" + "\n"
+    + "4 para instalar app" + "\n"
+    + "5 para listar apps instalados" + "\n"
+    + "6 para desistalar app" + "\n"
+    + "7 para comprar memoria" + "\n"
+    + "8 para mostrar histórico da sua carteira" + "\n"
+    + "9 para encerrar serviço");
 
     switch (Console.ReadLine())
     {
