@@ -11,6 +11,7 @@ namespace DesafioPOO.Models
         protected int MemoriaRam { get; set; }
         protected string Operadora { get; set; }
         protected List<string> apps = new();
+        protected List<string> chamadas = new();
 
         public Smartphone(int credito=0) : base(credito)
         {
@@ -40,18 +41,34 @@ namespace DesafioPOO.Models
             + $"Operadora: {Operadora}" + "\n"
             + $"Número de telefone: {Numero}, " + "\n" 
             + $"Modelo: {Modelo}, " + "\n" 
-            + $"Memória Ram: {MemoriaRam}, " + "\n" 
-            + $"Memória interna: {Memoria}");
+            + $"Memória interna: {Memoria}"+ "\n"
+            + $"Carteira: {Credito}");
         }
 
         public void Ligar()
         {
+            DateTime data = DateTime.Now; 
+            chamadas.Add($"Realizou uma ligação em {data}");
             Console.WriteLine($"Celular {Marca} está fazendo uma ligação...");
         }
 
         public void ReceberLigacao()
         {
+            DateTime data = DateTime.Now; 
+            chamadas.Add($"Recebeu uma ligação em {data}");
             Console.WriteLine($"Celular {Marca} está recebendo uma ligação...");
+        }
+
+        public void HistoricoChamadas() {
+            
+            if (chamadas.Any()) {
+                foreach(string chamada in chamadas) {
+                    Console.WriteLine(chamada);
+                }                
+            } else {
+                Console.WriteLine("Você ainda não realizou nenhuma chamada com seu smartphone");
+            }
+        
         }
 
         public abstract bool InstalarAplicativo();

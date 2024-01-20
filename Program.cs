@@ -52,22 +52,22 @@ int memoria = 0;
 
 Console.WriteLine($"Quantos GB de memória interna deseja:" +"\n" 
             + "(Digite uma das opções abaixo)" +"\n" 
-            + "1 - 3 GB" +"\n" 
-            + "2 - 5 GB" +"\n" 
-            + "3 - 7 GB");
+            + "1 - 1 GB" +"\n" 
+            + "2 - 2 GB" +"\n" 
+            + "3 - 3 GB");
 
 while (memoria==0) {
     switch (Console.ReadLine()) {
             case "1":
-                memoria = 3;
+                memoria = 1;
                 break;
 
             case "2":
-                memoria = 5;
+                memoria = 2;
                 break;
 
             case "3":
-                memoria = 7;
+                memoria = 3;
                 break;
 
             default:
@@ -92,15 +92,16 @@ bool home = true;
 while (home)
 {
     Console.WriteLine($"Digite o número da ação que deseja realizar: " + "\n"
-    + "1 para ver detalhes do seu Smartphone" + "\n"
-    + "2 para realizar chamada" + "\n"
-    + "3 para receber chamada" + "\n"
-    + "4 para instalar app" + "\n"
-    + "5 para listar apps instalados" + "\n"
-    + "6 para desistalar app" + "\n"
-    + "7 para comprar memoria" + "\n"
-    + "8 para mostrar histórico da sua carteira" + "\n"
-    + "9 para encerrar serviço");
+    + "1 - para ver detalhes do seu Smartphone" + "\n"
+    + "2 - para realizar chamada" + "\n"
+    + "3 - para receber chamada" + "\n"
+    + "4 - para listar histórico de chamadas" + "\n"
+    + "5 - para instalar app" + "\n"
+    + "6 - para listar apps instalados" + "\n"
+    + "7 - para desistalar app" + "\n"
+    + "8 - para comprar memoria" + "\n"
+    + "9 - para mostrar histórico da sua carteira" + "\n"
+    + "10 - para encerrar serviço");
 
     switch (Console.ReadLine())
     {
@@ -115,8 +116,12 @@ while (home)
         case "3":
             smartphone.ReceberLigacao();
             break;
-
+        
         case "4":
+            smartphone.HistoricoChamadas();
+            break;
+
+        case "5":
 
             bool res = smartphone.InstalarAplicativo();
             if (res.Equals(true)) {
@@ -134,23 +139,23 @@ while (home)
             }
             break;
 
-        case "5":
+        case "6":
             smartphone.ListarApps();
             break;
 
-        case "6":
+        case "7":
             smartphone.DesinstalarApp();
             break;
 
-        case "7":
+        case "8":
             smartphone.Comprar();
             break;
 
-        case "8":
+        case "9":
             smartphone.Historico();
             break;
         
-        case "9":
+        case "10":
             home = false;
             Console.WriteLine("Encerrando serviço...");
             break;
