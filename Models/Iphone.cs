@@ -18,33 +18,29 @@ namespace DesafioPOO.Models
 
         }
         // DONE: Sobrescrever o método "InstalarAplicativo"
-        public override bool InstalarAplicativo() {
-                       
+        public override bool InstalarAplicativo(){
+
+            if (Memoria == 0) {
+                Console.WriteLine($"Seu Nokia - {Modelo} não possui memória suficiente para instalar um novo app");                    
+                return true;
+            }
+
             Console.WriteLine("Informe o nome do app que você deseja instalar:");
             string nomeApp = Console.ReadLine();
 
-            if (!apps.Contains(nomeApp)) {
-
-                if (Memoria >= 1) {
-
-                    apps.Add(nomeApp);
-                    --Memoria;
-                    Console.WriteLine($" Aplicativo {nomeApp} instalado com sucesso!");
-
-                    return false;
-
-                } else {
-
-                    Console.WriteLine($"Seu Nokia - {Modelo} não possui memória suficiente para instalar o app {nomeApp}");                    
-                    return true;
-
-                }
-                
-            }
-            else {
-                Console.WriteLine($"O app {nomeApp} já existe em seu Nokia");
+            if (string.IsNullOrWhiteSpace(nomeApp)){
+                Console.WriteLine("Nome do aplicativo não pode ser vazio ou conter apenas espaços em branco.");
                 return false;
             }
+            else if (!apps.Contains(nomeApp)) {
+                apps.Add(nomeApp);
+                --Memoria;
+                Console.WriteLine($" Aplicativo {nomeApp} instalado com sucesso!");
+                return false;                
+            }   
+
+            Console.WriteLine($"O app {nomeApp} já existe em seu Nokia");
+            return false;             
         }
 
         public override void Comprar () {
