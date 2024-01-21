@@ -128,9 +128,11 @@ while (home)
                 Console.WriteLine("Caso deseje instalar o app, você pode:" + "\n" 
                     + "(Digite uma das opções abaixo)" + "\n"
                     + "1 - Desinstalar um app já existente em seu Nokia" + "\n"
-                    + "2 - Comprar mais memória");
+                    + "2 - Comprar mais memória" + "\n"
+                    + "Ou aperte Enter para sair");
                 string num = Console.ReadLine();
                 if(num.Equals("1")){
+                    smartphone.ListarApps();
                     smartphone.DesinstalarApp();
                 }
                 else if (num.Equals("2")) {
@@ -144,6 +146,7 @@ while (home)
             break;
 
         case "7":
+            smartphone.ListarApps();
             smartphone.DesinstalarApp();
             break;
 
