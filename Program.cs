@@ -157,7 +157,6 @@ while (home)
         
         case "10":
             home = false;
-            Console.WriteLine("Encerrando serviço...");
             break;
 
         default:
@@ -168,3 +167,4 @@ while (home)
     Console.WriteLine("Pressione a tecla 'Enter' para continuar");
     Console.ReadLine();
 }
+Console.WriteLine("Encerrando serviço...");

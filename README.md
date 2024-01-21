@@ -20,10 +20,11 @@ Você deve criar as suas classes de acordo com o diagrama abaixo:
        * IMEI;
        * Operadora;
        * Carteira.
+ - Mostrar detalhes sobre o smartphone;
  - Fazer ligação;
  - Receber ligação;
+ - Mostrar histórico de chamada;
  - Instalar e desinstalar app;
- - Mostrar detalhes sobre o smartphone;
  - Listar apps instalados;
  - Comprar memória;
  - Mostrar histórico da carteira.
