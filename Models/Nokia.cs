@@ -10,10 +10,9 @@ namespace DesafioPOO.Models
             string marca, 
             string modelo, 
             string imei, 
-            int memoria, 
-            string operadora,
+            int memoria,
             decimal credito
-        ) : base(numero, marca, modelo, imei, memoria, operadora, credito)
+        ) : base(numero, marca, modelo, imei, memoria, credito)
         { }
 
         // DONE: Sobrescrever o método "InstalarAplicativo"

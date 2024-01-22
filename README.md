@@ -17,9 +17,9 @@ Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abs
        * Modelo;
        * Memória;
        * IMEI;
-       * Operadora;
        * Carteira.
  - Mostrar detalhes sobre o smartphone;
+ - Ligar smartphone;
  - Fazer ligação;
  - Receber ligação;
  - Mostrar histórico de chamada;

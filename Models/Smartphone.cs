@@ -8,7 +8,6 @@ namespace DesafioPOO.Models
         protected string Modelo { get; set; }
         protected string Imei { get; set; }
         protected int Memoria { get; set; }
-        protected string Operadora { get; set; }
         protected List<string> apps = new();
         protected List<string> chamadas = new();
 
@@ -20,8 +19,7 @@ namespace DesafioPOO.Models
             string marca, 
             string modelo, 
             string imei, 
-            int memoria, 
-            string operadora,
+            int memoria,
             decimal credito
         ) : base (credito)
         {
@@ -31,13 +29,11 @@ namespace DesafioPOO.Models
             Modelo = modelo;
             Imei = imei;
             Memoria = memoria;
-            Operadora = operadora;
         }
 
         public void Detalhes() {
             Console.WriteLine("Informações do celular: " + "\n" 
             + $"Marca: {Marca}, " + "\n"
-            + $"Operadora: {Operadora}" + "\n"
             + $"Número de telefone: {Numero} " + "\n" 
             + $"Modelo: {Modelo} " + "\n" 
             + $"Imei: {Imei}, " + "\n" 
@@ -47,16 +43,25 @@ namespace DesafioPOO.Models
 
         public void Ligar()
         {
+            Console.WriteLine($"{Marca} está iniciando...");
+        }
+
+        public void FazerLigacao()
+        {
             DateTime data = DateTime.Now; 
-            chamadas.Add($"Realizou uma ligação em {data}");
-            Console.WriteLine($"Celular {Marca} está fazendo uma ligação...");
+            Random rnd = new();
+            string telefone = rnd.Next(90000000, 999999999).ToString();
+            chamadas.Add($"Realizou uma ligação para {telefone} em {data}");
+            Console.WriteLine($"Ligando para {telefone}...");
         }
 
         public void ReceberLigacao()
         {
             DateTime data = DateTime.Now; 
-            chamadas.Add($"Recebeu uma ligação em {data}");
-            Console.WriteLine($"Celular {Marca} está recebendo uma ligação...");
+            Random rnd = new();
+            string telefone = rnd.Next(90000000, 999999999).ToString();
+            chamadas.Add($"Recebeu uma ligação de {telefone} em {data}");
+            Console.WriteLine($"Recebendo uma ligação de {telefone}...");
         }
 
         public void HistoricoChamadas() {

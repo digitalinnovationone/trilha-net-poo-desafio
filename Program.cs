@@ -36,12 +36,6 @@ Console.ReadLine();
 Random rnd = new();
 string imei = rnd.Next().ToString();
 
-Console.WriteLine($"Me diga qual a operadora do seu chip");
-Console.Write("Operadora:");
-string operadora = Console.ReadLine();
-Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
-Console.ReadLine();
-
 Console.WriteLine($"Agora o seu número");
 Console.Write("Número:");
 string numero = Console.ReadLine();
@@ -82,11 +76,13 @@ Smartphone smartphone = new Iphone();
 
 if (marca.Equals("Iphone"))
 {
-    smartphone = new Iphone(numero, marca, modelo, imei, memoria, operadora, 10M);
+    smartphone = new Iphone(numero, marca, modelo, imei, memoria, 10M);
 }
 else if (marca.Equals("Nokia")) {
-    smartphone = new Nokia(numero, marca, modelo, imei, memoria, operadora, 10M);
+    smartphone = new Nokia(numero, marca, modelo, imei, memoria, 10M);
 }
+
+smartphone.Ligar();
 
 bool home = true;
 while (home)
@@ -110,7 +106,7 @@ while (home)
             break;
 
         case "2":
-            smartphone.Ligar();
+            smartphone.FazerLigacao();
             break;
 
         case "3":
