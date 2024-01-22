@@ -94,7 +94,7 @@ while (home)
     + "4 - para listar histórico de chamadas" + "\n"
     + "5 - para instalar app" + "\n"
     + "6 - para listar apps instalados" + "\n"
-    + "7 - para desistalar app" + "\n"
+    + "7 - para desinstalar app" + "\n"
     + "8 - para comprar memoria" + "\n"
     + "9 - para mostrar histórico da sua carteira" + "\n"
     + "10 - para encerrar serviço");
@@ -128,7 +128,6 @@ while (home)
                     + "Ou aperte Enter para sair");
                 string num = Console.ReadLine();
                 if(num.Equals("1")){
-                    smartphone.ListarApps();
                     smartphone.DesinstalarApp();
                 }
                 else if (num.Equals("2")) {

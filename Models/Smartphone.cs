@@ -80,25 +80,6 @@ namespace DesafioPOO.Models
 
         public abstract void Comprar();
 
-        public void DesinstalarApp(){
-            bool cheque = ListarApps();
-            if (cheque)
-            {
-                Console.WriteLine("Informa o nome do app que você deseja desinstalar");
-                string nomeApp = Console.ReadLine();
-                if (apps.Contains(nomeApp)) {
-                    apps.Remove(nomeApp);
-                    ++Memoria;
-                    Console.WriteLine($"Aplicativo {nomeApp} removido com sucesso!");
-                }
-                else {
-                    Console.WriteLine($"O aplicativo {nomeApp} não está instalado no celular {Marca}");
-                }
-            }
-            
-
-        }
-
         public bool ListarApps() {
             if (apps.Any()) {
                 Console.WriteLine($"Aplicativos instalados no {Marca} - {Modelo}:");
@@ -113,6 +94,22 @@ namespace DesafioPOO.Models
                 Console.WriteLine($"Não tem aplicativo instalado no {Marca} - {Modelo}");
                 return false;
             }
+        }
+        public void DesinstalarApp(){
+            bool cheque = ListarApps();
+            if (cheque)
+            {
+                Console.WriteLine("Informa o nome do app que você deseja desinstalar");
+                string nomeApp = Console.ReadLine();
+                if (apps.Contains(nomeApp)) {
+                    apps.Remove(nomeApp);
+                    ++Memoria;
+                    Console.WriteLine($"Aplicativo {nomeApp} removido com sucesso!");
+                }
+                else {
+                    Console.WriteLine($"O aplicativo {nomeApp} não está instalado no celular {Marca}");
+                }
+            }        
         }
     }
 }
