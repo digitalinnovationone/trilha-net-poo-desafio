@@ -2,10 +2,10 @@ namespace DesafioPOO.Models
 {
     public class Carteira
     {
-        protected int Credito { get; set; }
+        protected decimal Credito { get; set; }
         protected List<string> historico = new();
 
-        public Carteira(int credito) {
+        public Carteira(decimal credito) {
             Credito = credito;
         }
         public void Historico() {

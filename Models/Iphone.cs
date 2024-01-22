@@ -12,8 +12,8 @@ namespace DesafioPOO.Models
             string imei, 
             int memoria, 
             string operadora,
-            int total
-        ) : base(numero, marca, modelo, imei, memoria, operadora, total)
+            decimal credito
+        ) : base(numero, marca, modelo, imei, memoria, operadora, credito)
         {
 
         }

@@ -8,12 +8,11 @@ namespace DesafioPOO.Models
         protected string Modelo { get; set; }
         protected string Imei { get; set; }
         protected int Memoria { get; set; }
-        protected int MemoriaRam { get; set; }
         protected string Operadora { get; set; }
         protected List<string> apps = new();
         protected List<string> chamadas = new();
 
-        public Smartphone(int credito=0) : base(credito)
+        public Smartphone(decimal credito=0) : base(credito)
         {
         }
         public Smartphone(
@@ -23,7 +22,7 @@ namespace DesafioPOO.Models
             string imei, 
             int memoria, 
             string operadora,
-            int credito
+            decimal credito
         ) : base (credito)
         {
             Numero = numero;
@@ -39,10 +38,11 @@ namespace DesafioPOO.Models
             Console.WriteLine("Informações do celular: " + "\n" 
             + $"Marca: {Marca}, " + "\n"
             + $"Operadora: {Operadora}" + "\n"
-            + $"Número de telefone: {Numero}, " + "\n" 
-            + $"Modelo: {Modelo}, " + "\n" 
+            + $"Número de telefone: {Numero} " + "\n" 
+            + $"Modelo: {Modelo} " + "\n" 
+            + $"Imei: {Imei}, " + "\n" 
             + $"Memória interna: {Memoria}"+ "\n"
-            + $"Carteira: {Credito}");
+            + $"Carteira: ${Credito.ToString("F")}");
         }
 
         public void Ligar()

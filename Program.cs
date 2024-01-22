@@ -82,10 +82,10 @@ Smartphone smartphone = new Iphone();
 
 if (marca.Equals("Iphone"))
 {
-    smartphone = new Iphone(numero, marca, modelo, imei, memoria, operadora, 10);
+    smartphone = new Iphone(numero, marca, modelo, imei, memoria, operadora, 10M);
 }
 else if (marca.Equals("Nokia")) {
-    smartphone = new Nokia(numero, marca, modelo, imei, memoria, operadora, 10);
+    smartphone = new Nokia(numero, marca, modelo, imei, memoria, operadora, 10M);
 }
 
 bool home = true;
