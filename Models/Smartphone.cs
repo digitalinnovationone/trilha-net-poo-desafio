@@ -33,12 +33,12 @@ namespace DesafioPOO.Models
 
         public void Detalhes() {
             Console.WriteLine("Informações do celular: " + "\n" 
-            + $"Marca: {Marca}, " + "\n"
-            + $"Número de telefone: {Numero} " + "\n" 
-            + $"Modelo: {Modelo} " + "\n" 
-            + $"Imei: {Imei}, " + "\n" 
-            + $"Memória interna: {Memoria}"+ "\n"
-            + $"Carteira: ${Credito.ToString("F")}");
+            + $" - Marca: {Marca}, " + "\n"
+            + $" - Número de telefone: {Numero} " + "\n" 
+            + $" - Modelo: {Modelo} " + "\n" 
+            + $" - Imei: {Imei}, " + "\n" 
+            + $" - Memória interna: {Memoria}"+ "\n"
+            + $" - Carteira: ${Credito.ToString("F")}");
         }
 
         public void Ligar()
@@ -81,20 +81,25 @@ namespace DesafioPOO.Models
         public abstract void Comprar();
 
         public void DesinstalarApp(){
-            Console.WriteLine("Informa o nome do app que você deseja desinstalar");
-            string nomeApp = Console.ReadLine();
-            if (apps.Contains(nomeApp)) {
-                apps.Remove(nomeApp);
-                ++Memoria;
-                Console.WriteLine($"Aplicativo {nomeApp} removido com sucesso!");
+            bool cheque = ListarApps();
+            if (cheque)
+            {
+                Console.WriteLine("Informa o nome do app que você deseja desinstalar");
+                string nomeApp = Console.ReadLine();
+                if (apps.Contains(nomeApp)) {
+                    apps.Remove(nomeApp);
+                    ++Memoria;
+                    Console.WriteLine($"Aplicativo {nomeApp} removido com sucesso!");
+                }
+                else {
+                    Console.WriteLine($"O aplicativo {nomeApp} não está instalado no celular {Marca}");
+                }
             }
-            else {
-                Console.WriteLine($"O aplicativo {nomeApp} não está instalado no celular {Marca}");
-            }
+            
 
         }
 
-        public void ListarApps() {
+        public bool ListarApps() {
             if (apps.Any()) {
                 Console.WriteLine($"Aplicativos instalados no {Marca} - {Modelo}:");
 
@@ -102,9 +107,11 @@ namespace DesafioPOO.Models
                 {
                     Console.WriteLine($"- \"{item}\" -");
                 }
+                return true;
             }
             else {
                 Console.WriteLine($"Não tem aplicativo instalado no {Marca} - {Modelo}");
+                return false;
             }
         }
     }

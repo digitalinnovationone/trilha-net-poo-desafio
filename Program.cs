@@ -24,14 +24,12 @@ do {
 }
 while(marca.Equals(" "));
 
-Console.WriteLine($"Pressione a tecla 'Enter' para continuar");
-Console.ReadLine();
+Console.WriteLine("--------------------------------");
 
 Console.WriteLine($"Me diga qual modelo você gostaria de adquirir");
 Console.Write("Modelo:");
 string modelo = Console.ReadLine();
-Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
-Console.ReadLine();
+Console.WriteLine("--------------------------------");
 
 Random rnd = new();
 string imei = rnd.Next().ToString();
@@ -39,11 +37,9 @@ string imei = rnd.Next().ToString();
 Console.WriteLine($"Agora o seu número");
 Console.Write("Número:");
 string numero = Console.ReadLine();
-Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
-Console.ReadLine();
+Console.WriteLine("--------------------------------");
 
 int memoria = 0;
-
 Console.WriteLine($"Quantos GB de memória interna deseja:" +"\n" 
             + "(Digite uma das opções abaixo)" +"\n" 
             + "1 - 1 GB" +"\n" 
@@ -69,8 +65,8 @@ while (memoria==0) {
                 break;
     }
 }
-Console.WriteLine($"Pressione a tecla 'Enter' para continuar.");
-Console.ReadLine();
+
+Console.WriteLine("--------------------------------");
 
 Smartphone smartphone = new Iphone();
 
@@ -82,7 +78,11 @@ else if (marca.Equals("Nokia")) {
     smartphone = new Nokia(numero, marca, modelo, imei, memoria, 10M);
 }
 
+Console.WriteLine($"Seu smartphone está pronto!");
+
 smartphone.Ligar();
+
+Console.WriteLine("--------------------------------");
 
 bool home = true;
 while (home)
@@ -142,7 +142,6 @@ while (home)
             break;
 
         case "7":
-            smartphone.ListarApps();
             smartphone.DesinstalarApp();
             break;
 
@@ -164,6 +163,7 @@ while (home)
     }
 
     Console.WriteLine("Pressione a tecla 'Enter' para continuar");
+    Console.WriteLine("--------------------------------");
     Console.ReadLine();
 }
 Console.WriteLine("Encerrando serviço...");
