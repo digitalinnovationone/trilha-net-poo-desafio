@@ -20,7 +20,7 @@ namespace DesafioPOO.Models
         public override bool InstalarAplicativo(){
 
             if (Memoria == 0) {
-                Console.WriteLine($"Seu Nokia - {Modelo} não possui memória suficiente para instalar um novo app");                    
+                Console.WriteLine($"Seu Iphone - {Modelo} não possui memória suficiente para instalar um novo app");                    
                 return true;
             }
 
@@ -45,10 +45,10 @@ namespace DesafioPOO.Models
         public override void Comprar () {
             if(Credito>0) {
                 --Credito;
-                DateTime data = DateTime.Now; 
-                historico.Add($"-$1,00 em {data}");
+                DateTime dataDeCompra = DateTime.Now; 
+                historico.Add($"-$1,00 em {dataDeCompra}");
                 ++Memoria;
-                Console.WriteLine("Memória adicionada ao seu Nokia com sucesso!");
+                Console.WriteLine("Memória adicionada ao seu Iphone com sucesso!");
             } else {
                 Console.WriteLine("Você não tem créditos :(");
             }
