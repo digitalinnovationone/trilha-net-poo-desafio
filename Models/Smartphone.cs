@@ -48,25 +48,26 @@ namespace DesafioPOO.Models
 
         public void FazerLigacao()
         {
-            DateTime data = DateTime.Now; 
+            DateTime dataDeLigacao = DateTime.Now; 
             Random rnd = new();
             string telefone = rnd.Next(90000000, 999999999).ToString();
-            chamadas.Add($"Realizou uma ligação para {telefone} em {data}");
+            chamadas.Add($"Realizou uma ligação para {telefone} em {dataDeLigacao}");
             Console.WriteLine($"Ligando para {telefone}...");
         }
 
         public void ReceberLigacao()
         {
-            DateTime data = DateTime.Now; 
+            DateTime dataDeLigacao = DateTime.Now; 
             Random rnd = new();
             string telefone = rnd.Next(90000000, 999999999).ToString();
-            chamadas.Add($"Recebeu uma ligação de {telefone} em {data}");
+            chamadas.Add($"Recebeu uma ligação de {telefone} em {dataDeLigacao}");
             Console.WriteLine($"Recebendo uma ligação de {telefone}...");
         }
 
         public void HistoricoChamadas() {
             
             if (chamadas.Any()) {
+                Console.WriteLine("Histórico de chamadas");
                 foreach(string chamada in chamadas) {
                     Console.WriteLine(chamada);
                 }                

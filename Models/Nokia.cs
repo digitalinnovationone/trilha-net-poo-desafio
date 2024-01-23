@@ -44,8 +44,8 @@ namespace DesafioPOO.Models
         public override void Comprar () {
             if(Credito>0) {
                 --Credito;
-                DateTime data = DateTime.Now; 
-                historico.Add($"-$1,00 em {data}");
+                DateTime dataDeCompra = DateTime.Now; 
+                historico.Add($"-$1,00 em {dataDeCompra}");
                 ++Memoria;
                 Console.WriteLine("Memória adicionada ao seu Nokia com sucesso!");
             } else {
