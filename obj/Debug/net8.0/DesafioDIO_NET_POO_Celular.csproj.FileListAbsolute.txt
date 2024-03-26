@@ -1,0 +1,14 @@
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.AssemblyInfoInputs.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.AssemblyInfo.cs
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\bin\Debug\net8.0\DesafioDIO_NET_POO_Celular.exe
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\bin\Debug\net8.0\DesafioDIO_NET_POO_Celular.deps.json
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\bin\Debug\net8.0\DesafioDIO_NET_POO_Celular.runtimeconfig.json
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\bin\Debug\net8.0\DesafioDIO_NET_POO_Celular.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\bin\Debug\net8.0\DesafioDIO_NET_POO_Celular.pdb
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\refint\DesafioDIO_NET_POO_Celular.dll
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.pdb
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\DesafioDIO_NET_POO_Celular.genruntimeconfig.cache
+C:\Users\Gustavo\source\repos\DesafioDIO_NET_POO_Celular\DesafioDIO_NET_POO_Celular\obj\Debug\net8.0\ref\DesafioDIO_NET_POO_Celular.dll
