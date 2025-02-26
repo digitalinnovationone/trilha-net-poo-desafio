@@ -1,3 +1,13 @@
+🔹 .NET SDK (Kit de Desenvolvimento)
+🔸 Baixe e instale em: https://dotnet.microsoft.com/en-us/download/dotnet
+
+🔹 Extensão C# no VS Code
+🔸 Abra o VS Code → Vá em Extensões (Ctrl + Shift + X) → Pesquise C# → Instale
+
+dotnet new console -n MeuProjeto
+cd MeuProjeto
+
+
 # DIO - Trilha .NET - Programação orientada a objetos
 www.dio.me
 
