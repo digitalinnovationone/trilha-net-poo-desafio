@@ -20,3 +20,5 @@ Você deve criar as suas classes de acordo com o diagrama abaixo:
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## DESAFIO CONCLUIDO
