@@ -1,16 +1,26 @@
+using System;
+
 namespace DesafioPOO.Models
 {
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
 
-        public Smartphone(string numero)
+        // Propriedades faltantes do diagrama
+        public string Modelo { get; set; }
+        public string IMEI { get; set; }
+        public int Memoria { get; set; }
+
+        // Construtor
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            IMEI = imei;
+            Memoria = memoria;
         }
 
+        // Métodos concretos
         public void Ligar()
         {
             Console.WriteLine("Ligando...");
@@ -21,6 +31,7 @@ namespace DesafioPOO.Models
             Console.WriteLine("Recebendo ligação...");
         }
 
+        // Método abstrato
         public abstract void InstalarAplicativo(string nomeApp);
     }
 }
