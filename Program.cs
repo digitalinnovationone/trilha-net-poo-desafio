@@ -1,3 +1,9 @@
 ﻿using DesafioPOO.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
+var iphone = new Iphone("88237857", "XS", "74982845", 32);
+
+iphone.InstalarAplicativo("Instagram");
+
+var nokia = new Iphone("88237857", "C3", "74982845", 64);
+
+nokia.InstalarAplicativo("whatsapp");
